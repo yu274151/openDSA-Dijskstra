@@ -4,8 +4,8 @@
     <title>Dijkstra's Algorithm Proficiency Exercise</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../lib/JSAV.css" type="text/css" />
-    <link rel="stylesheet" href="../../lib/odsaAV-min.css" type="text/css" />
-    <link rel="stylesheet" href="../../lib/odsaStyle-min.css" type="text/css" />
+    <link rel="stylesheet" href="../../lib/odsaAV.css" type="text/css" />
+    <link rel="stylesheet" href="../../lib/odsaStyle.css" type="text/css" />
     <link rel="stylesheet" href="DijkstraPE.css" />
   </head>
   <body>
@@ -34,6 +34,14 @@
         </div>
       </form>
     </div>
+    <div>
+        <form name="theForm1" action = "/score-feedback" method = "POST">
+                Score: <input type = "text" name = "score"> <br>
+                Remaining Points: <input type = "text" name = "remainder">
+                Points Lost: <input type = "text" name = "lost">
+                <input type = "submit" value = "Submit">
+      	</form>
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="../../lib/jquery.transit.js"></script>
@@ -44,5 +52,37 @@
     <script src="../../lib/odsaAV.js"></script>
     <script src="../Development/graphUtils.js"></script>
     <script src="DijkstraPE.js"></script>
+     <script>
+    	let result = document.getElementById('result');
+    	result.addEventListener('click', () => {
+    		
+		let score = document.getElementsByClassName('jsavcurrentscore')[0].textContent;
+		let remainder = document.getElementsByClassName('jsavamidone')[0].textContent;
+		let lost = document.getElementsByClassName('jsavpointslost')[0].textContent;
+		
+		if(remainder.includes("DONE")){
+			remainder = 0
+		} else {
+			remainder = remainder.split(" ")[2];
+		}
+		
+			
+		
+		
+		document.theForm1.score.value = score;
+		document.theForm1.remainder.value = remainder;
+		document.theForm1.lost.value = lost;
+    		
+    	});
+    </script>
+      <style>
+    
+        input[type=text] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+	    }
+    </style>
   </body>
 </html>

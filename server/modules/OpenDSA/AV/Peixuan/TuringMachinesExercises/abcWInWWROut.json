@@ -1,0 +1,38 @@
+[{
+  "_exerciseType": "Comment: DFA, NFA, REGEXP, GRAMMAR, PDA, TM.",
+  "exerciseType": "TM",
+  "totalTestCases": 5,
+  "containLetters": ["a","b","c"],
+  "randomStringLength": [0, 15],
+  "_hardCodeCasesCounter": "Comment: Number of hard code test cases.",
+  "hardCodeCasesCounter": 5,
+  "expression": "",
+  "description": "Write a Turing machine on input alphabet Σ = {a,b,c} that takes input w and outputs $ww^R$",
+  "type": "description",
+  "testCases": [{
+      "a": "aa",
+      "ShowTestCase":true
+    },
+    {
+      "ab": "abba",
+      "ShowTestCase":true
+    },
+    {
+      "ac": "acca",
+      "ShowTestCase":true
+    },
+    {
+      "bc": "bccb",
+      "ShowTestCase":true
+    },
+    {
+      "abc": "abccba",
+      "ShowTestCase":true
+    }
+  ],
+  "graph": {
+    "nodes": [],
+    "edges": []
+  },
+  "solution": ""
+}]

@@ -17,7 +17,7 @@ catalog.build('./modules/OpenDSA/AV/', '/AV', (err,cat) => {
 });
 
 let urlencodedParser = bodyParser.urlencoded({ extended: false })
-const PORT = 5000;
+const PORT = 80;
 const HOST = '0.0.0.0';
 
 const app = express();

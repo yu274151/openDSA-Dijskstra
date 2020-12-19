@@ -1,9 +1,6 @@
 const {MongoClient} = require("mongodb");
-const config = require("./config.js");
 
-console.log(config);
-
-const url = "mongodb+srv://jihan:Jcriki04@cluster0.m2xf1.mongodb.net/<dbname>retryWrites=true&w=majority";
+const url = "mongodb+srv://openDSAadmin:test1234@cluster0.m2xf1.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 const client = new MongoClient(url);
 

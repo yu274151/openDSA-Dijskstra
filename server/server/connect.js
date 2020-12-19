@@ -16,11 +16,12 @@ async function run(score={}) {
 	
 		 let studentScoreDocument = score;
          
-         const p = await col.insertOne(studentScoreDocument);
+         const value = await col.insertOne(studentScoreDocument);
+	 console.log(value);
          
-         const myDoc = await col.findOne();
+         const studentScore = await col.findOne();
 	
-         console.log(myDoc);
+         console.log(studentScore);
 	
 	
 	} catch(err) {
